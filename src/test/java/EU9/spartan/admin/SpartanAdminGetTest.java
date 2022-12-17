@@ -1,2 +1,6 @@
-package EU9.spartan.admin;public class SpartanAdminGetTest {
+package EU9.spartan.admin;
+
+public class SpartanAdminGetTest {
+
+
 }
