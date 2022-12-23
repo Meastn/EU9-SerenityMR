@@ -39,4 +39,7 @@ Here is a link [to basic Serenity documentation!](https://serenity-bdd.github.io
     <version>3.5.0</version>
 </dependency>
 ```
-6. 
+6. Create a package EU9 under Java
+7. Create Spartan package under EU9 package
+8. Create admin package under Spartan package
+9. Create SpartanAdminGetTEst java class under admin package
