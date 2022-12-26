@@ -43,3 +43,26 @@ Here is a link [to basic Serenity documentation!](https://serenity-bdd.github.io
 7. Create Spartan package under EU9 package
 8. Create admin package under Spartan package
 9. Create SpartanAdminGetTEst java class under admin package
+10. This is just a regular test. In order to serenity recognize the test
+    * add annotation @SerenityTest at the class level
+    * it is coming from import net.serenitybdd.junit5.SerenityTest;
+11. Add a properties file with the exect name "serenity.properties" under the main project folder
+12. add following lines to the new property file
+    * serenity.project.name =EU9 API Report
+    * serenity.test.root =EU9
+13. The sis for serenity to pickup log and eliminate warnings
+    <dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>2.0.5</version>
+    </dependency>
+14. SerenityRest provides its own assertions so that they can be directly used in reporting
+15. Ensure.that() is the assertion method of SerenityRest
+Like:
+```
+  Ensure.that("Status code is 200", validatableResponse -> validatableResponse.statusCode(200));
+  
+  Ensure.that("Content Type is JSON", vLRes -> vLRes.contentType(ContentType.JSON));
+  
+  Ensure.that("ID is 15", vLRes -> vLRes.body("id", is (15)));```
+
