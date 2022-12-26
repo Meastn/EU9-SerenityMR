@@ -15,10 +15,11 @@ public class SpartanNewBase {
     public static RequestSpecification userSpec;
 
     @BeforeAll
-    public static void init(){
-        //save baseurl inside this variable so that we dont need to type each http metadada
-        baseURI = "http://44.195.19.167";
-        port =7000;
+    public static void init() {
+        //save baseurl inside this variable so that we don't need to type  http metadata each time
+        baseURI = "http://3.83.225.50";
+        port = 7000;
+        //basePath="/api";
 
         adminSpec = given()
                 .accept(ContentType.JSON)
@@ -38,9 +39,10 @@ public class SpartanNewBase {
                         .contentType(ContentType.JSON)
                         .logDetail(LogDetail.ALL);
     }
+
     @AfterAll
-    public static void close(){
-        //reset the infor we set above. useful when dealing with multiple API addresses
+    public static void close() {
+        //reset the information we set above. useful when dealing with multiple API addresses
         reset();
     }
 

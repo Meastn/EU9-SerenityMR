@@ -64,5 +64,9 @@ Like:
   
   Ensure.that("Content Type is JSON", vLRes -> vLRes.contentType(ContentType.JSON));
   
-  Ensure.that("ID is 15", vLRes -> vLRes.body("id", is (15)));```
+  Ensure.that("ID is 15", vLRes -> vLRes.body("id", is (15)));
+```  
+
+16. We do not need jackson or gson dependencies to serialize as long as we use SerenityRest
+
 
